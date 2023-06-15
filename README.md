@@ -1,6 +1,6 @@
 # m31_jwst_2609
 
-REPLACE THIS WITH THE CONTAINER'S PROJECT DESCRIPTION.
+This is Erik Tollerud's analysis and reduction machinery for JWST Cycle 1 GO program  2609 "Searching for the Alpha-Abundance Bimodality in the M31 Disk".
 
 
 To use this container:
