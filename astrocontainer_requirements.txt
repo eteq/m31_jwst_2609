@@ -1,0 +1,10 @@
+# this requirements file is shared across all "astrocontainer" instances
+wheel
+astropy
+astroquery
+numpy
+scipy
+matplotlib
+ipython
+jupyter
+jupyterlab

@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+*.pyc
+content/data
+*venv*
+containerexec_link

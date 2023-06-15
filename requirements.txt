@@ -1,0 +1,21 @@
+# this requirements file contains project-specific requirements
+
+jupyterlab>=4.0.0
+parso>=0.8.3
+ipykernel>6.21.0
+#python-language-server
+python-lsp-server
+jwst
+photutils
+specutils
+specreduce
+jdaviz
+tqdm
+ndcube
+mpl-animators
+webbpsf
+emcee
+dynesty
+corner
+cython
+#spectres
