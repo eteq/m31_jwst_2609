@@ -6,7 +6,5 @@ $CONTAINER_EXEC run -it --rm --privileged --gpus all \
            -e HOST_UID="$(id -u)" \
            -e HOST_GID="$(id -g)" \
            --mount type=bind,source="$(pwd)"/content,target=/containerapp/content \
-           --mount type=bind,source=/mnt/extdata/m31_jwst_data/MAST_2022-08-24T1111,target=/containerapp/content/MAST_2022-08-24T1111 \
-           --mount type=bind,source=/mnt/extdata/m31_jwst_data/mastDownload,target=/containerapp/content/mastDownload \
-           --mount type=bind,source=/mnt/extdata/crds_cache,target=/containerapp/content/crds_cache \
+           `cat extramounts` \
            m31_jwst_2609 "$@"
