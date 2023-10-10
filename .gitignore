@@ -19,3 +19,7 @@ content/*.png
 
 content/testout
 content/widened*
+content/data
+content/ephem*
+
+extramounts
