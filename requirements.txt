@@ -5,11 +5,11 @@ parso>=0.8.3
 ipykernel>6.21.0
 #python-language-server
 python-lsp-server
-jwst
+jwst>=1.13.0
 photutils
 specutils
 specreduce
-jdaviz
+#jdaviz
 tqdm
 ndcube
 mpl-animators
@@ -19,3 +19,4 @@ dynesty
 corner
 cython
 ipylab
+nbconvert

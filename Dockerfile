@@ -1,4 +1,4 @@
-FROM python:3 AS stage1
+FROM python:3.11 AS stage1
 
 WORKDIR /root
 
@@ -8,7 +8,7 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
 
 WORKDIR /containerapp
 
-RUN wget --content-disposition https://stsci.box.com/shared/static/t90gqazqs82d8nh25249oq1obbjfstq8.gz; tar xzf webbpsf-data*.tar.gz;chmod -R a+r /containerapp/webbpsf-data; rm webbpsf-data*.tar.gz
+RUN wget --content-disposition https://stsci.box.com/shared/static/qxpiaxsjwo15ml6m4pkhtk36c9jgj70k.gz; tar xzf webbpsf-data*.tar.gz;chmod -R a+r /containerapp/webbpsf-data; rm webbpsf-data*.tar.gz
 ENV WEBBPSF_PATH=/containerapp/webbpsf-data
 
 # CUDA
@@ -30,6 +30,9 @@ RUN --mount=type=cache,target=/root/.cache pip install -r requirements.txt
 
 # separate from the requirements because it depdns on the cuda build above
 RUN --mount=type=cache,target=/root/.cache pip install cupy-cuda12x
+
+# patches to webbpsf
+RUN sed -i -e 's/(inst_rms_wfe_nm,/(float(inst_rms_wfe_nm),/g' -e 's/(pupil_rms_wfe_nm,/(float(pupil_rms_wfe_nm),/g' /usr/local/lib/python3.11/site-packages/webbpsf/webbpsf_core.py
 
 # for jupyter
 EXPOSE 8888 
