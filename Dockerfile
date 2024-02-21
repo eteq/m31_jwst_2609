@@ -31,7 +31,7 @@ RUN --mount=type=cache,target=/root/.cache pip install -r requirements.txt
 # separate from the requirements because it depdns on the cuda build above
 RUN --mount=type=cache,target=/root/.cache pip install cupy-cuda12x
 
-# patches to webbpsf
+# patches to webbpsf - see https://github.com/spacetelescope/webbpsf/pull/807
 RUN sed -i -e 's/(inst_rms_wfe_nm,/(float(inst_rms_wfe_nm),/g' -e 's/(pupil_rms_wfe_nm,/(float(pupil_rms_wfe_nm),/g' /usr/local/lib/python3.11/site-packages/webbpsf/webbpsf_core.py
 
 # for jupyter
