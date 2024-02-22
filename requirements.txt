@@ -19,7 +19,8 @@ dynesty
 corner
 cython
 ipylab
-nbconvert
+papermill
+pyyaml
 spyderwebb @ git+https://github.com/dnidever/spyderwebb@a92ff1233dbdff13cf0321a0c5ed0d5a420a3498
 theborg @ git+https://github.com/dnidever/theborg@3fce4ef809efb93ba70c5756c9bdd76962d692f8
 doppler @ git+https://github.com/dnidever/doppler@da73554dce40ee26ff08a09b33741b4ba66ee9b5
