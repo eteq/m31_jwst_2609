@@ -1,11 +1,16 @@
+last_build
 content/cupy_cache
 content/*data
 content/phoenix
+tech_note_paper1
 
 .ipynb_checkpoints
 *.pyc
 *venv*
 containerexec_link
+*.fits
+*.fits.gz
+
 
 **/.jupyter_config
 **/.virtual_documents
