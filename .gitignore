@@ -10,7 +10,8 @@ tech_note_paper1
 containerexec_link
 *.fits
 *.fits.gz
-
+*.tar.gz
+*.pickle
 
 **/.jupyter_config
 **/.virtual_documents
