@@ -27,3 +27,5 @@ doppler @ git+https://github.com/dnidever/doppler@da73554dce40ee26ff08a09b33741b
 torch
 scikit-learn
 multiprocess
+gpytorch
+
